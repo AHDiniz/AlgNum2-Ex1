@@ -1,0 +1,21 @@
+685_bus.mat:
+
+Taxa de preenchimento = 85.892927
+Solução aproximada para sistema linear = 26.172505
+Solução para sistema linear = 26.172505
+Distância relativa = 0.000000
+Distância relativa da decomposição = 0.811059
+Distância relativa dos termos independentes = 0.000000
+Norma do resíduo = 0.000000
+Número de condicionamento = 423125.637363
+
+M80PI_n.mat:
+
+Solução aproximada para sistema linear = 63.499839
+Solução para sistema linear = 64.668385
+Distância relativa = 1.852459
+Distância relativa da decomposição = 0.236012
+Distância relativa dos termos independentes = 0.000000
+Norma do resíduo = 0.000000
+Número de condicionamento = 528421445779816768.000000
+
