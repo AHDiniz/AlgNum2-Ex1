@@ -9,9 +9,9 @@ b = A * solution;
 isDiagDom = diagonal_dominante(A);
 printf("É diagonal dominante? %s\n", isDiagDom);
 
-tol = 0.00001;
+tol = 0.0001;
 printf("Tolerância = %f\n", tol);
-nMaxIter = 2000;
+nMaxIter = 1000;
 printf("Número máximo de iterações = %f\n", nMaxIter);
 omega = 1.5;
 printf("Omega = %f\n", omega);
