@@ -1,4 +1,4 @@
-load "685_bus.mat"
+load "M80PI_n.mat"
 
 A = Problem.A;
 n = rows(A);

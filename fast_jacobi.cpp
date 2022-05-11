@@ -39,7 +39,7 @@ DEFUN_DLD(fast_jacobi, args, nargout, "C++ implementation of the Gauss-Jacobi me
                 soma += A(j, k) * x0(k);
             }
 
-            x(j) = (b(j) - soma) / A(j, j);
+            x(j) = A(j, j) != 0.0f ? (b(j) - soma) / A(j, j) : 0.0f;
         }
 
         ++i;
@@ -54,7 +54,7 @@ DEFUN_DLD(fast_jacobi, args, nargout, "C++ implementation of the Gauss-Jacobi me
         b_in(1) = "inf";
         double b = (octave::feval("norm", b_in))(0).double_value();
 
-        er(i) = a / b;
+        er(i) = b != 0.0f ? a / b : 0.0f;
         x0 = x;
     }
 

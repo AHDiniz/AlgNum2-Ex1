@@ -40,7 +40,10 @@ DEFUN_DLD(fast_sor, args, nargout, "C++ implementation of the SOR method")
                 soma += A(j, k) * x0(k);
             }
 
-            x(j) = w * (b(j) - soma) / A(j, j) + (1 - w) * x0(j);
+            if (A(i, j) != 0)
+                x(j) = w * (b(j) - soma) / A(j, j) + (1 - w) * x0(j);
+            else
+                x(j) = (1 - w) * x0(j);
         }
 
         ++i;
@@ -55,7 +58,7 @@ DEFUN_DLD(fast_sor, args, nargout, "C++ implementation of the SOR method")
         b_in(1) = "inf";
         double b = (octave::feval("norm", b_in))(0).double_value();
 
-        er(i) = a / b;
+        er(i) = b != 0.0f ? a / b : 0.0f;
         x0 = x;
     }
 
