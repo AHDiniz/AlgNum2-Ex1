@@ -22,14 +22,29 @@ printf("Norma da solução (Jacobi) = %f\n", normJacobi);
 printf("Erro (Jacobi) = %f\n", erJacobi(iterJacobi));
 printf("Número de iterações (Jacobi) = %d\n", iterJacobi);
 
+plot(iterJacobi, erJacobi(iterJacobi));
+xlabel("Número de Iterações");
+ylabel("Erro");
+title("Número de Iterações X Erro (Jacobi)");
+
 [xSeidel, erSeidel, iterSeidel] = fast_seidel(A, b, tol, nMaxIter);
 normSeidel = norm(xSeidel, inf);
 printf("Norma da solução (Seidel) = %f\n", normSeidel);
 printf("Erro (Seidel) = %f\n", erSeidel(iterSeidel));
 printf("Número de iterações (Seidel) = %d\n", iterSeidel);
 
+plot(iterSeidel, erSeidel(iterSeidel));
+xlabel("Número de Iterações");
+ylabel("Erro");
+title("Número de Iterações X Erro (Seidel)");
+
 [xSOR, erSOR, iterSOR] = fast_sor(A, b, tol, nMaxIter, omega);
 normSOR = norm(xSOR, inf);
 printf("Norma da solução (SOR) = %f\n", normSOR);
 printf("Erro (SOR) = %f\n", erSOR(iterSOR));
 printf("Número de iterações (SOR) = %d\n", iterSOR);
+
+plot(iterSOR, erSOR(iterSOR));
+xlabel("Número de Iterações");
+ylabel("Erro");
+title("Número de Iterações X Erro (SOR)");
