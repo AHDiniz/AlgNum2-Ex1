@@ -55,11 +55,12 @@ title("Número de Iterações X Erro (Seidel)");
 print("hf", "685_bus_seidel.png", "-dpng");
 
 [xSOR, erSOR, iterSOR, timeSOR] = fast_sor(A, b, tol, nMaxIter, omega);
+% [xSOR, erSOR, iterSOR] = sor(A, b, tol, nMaxIter, omega);
 normSOR = norm(xSOR, inf);
 printf("Norma da solução (SOR) = %f\n", normSOR);
 printf("Erro (SOR) = %f\n", erSOR(iterSOR));
 printf("Número de iterações (SOR) = %d\n", iterSOR);
-printf("Tempo de execução (SOR) = %fs\n", timeSOR);
+% printf("Tempo de execução (SOR) = %fs\n", timeSOR);
 
 erArraySOR = zeros(iterSOR, 1);
 for i = 1 : iterSOR

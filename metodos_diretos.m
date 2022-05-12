@@ -1,15 +1,18 @@
-load "M80PI_n.mat"
+load "685_bus.mat"
 
 A = Problem.A;
 n = rows(A);
 
 [L, U, P] = lu(A);
+hf = figure();
 spy(A);
-waitforbuttonpress();
+print(hf, "658_bus.png", "-dpng");
+hf = figure();
 spy(L);
-waitforbuttonpress();
+print(hf, "685_bus_L.png", "-dpng");
+hf = figure();
 spy(U);
-waitforbuttonpress();
+print(hf, "685_bus_U.png", "-dpng");
 
 fill = 100 - (nnz(A) / (nnz(L) + nnz(U))) * 100;
 printf("Taxa de preenchimento = %f\n", fill);

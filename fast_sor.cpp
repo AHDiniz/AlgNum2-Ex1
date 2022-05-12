@@ -20,13 +20,12 @@ DEFUN_DLD(fast_sor, args, nargout, "C++ implementation of the SOR method")
     ColumnVector x(n);
     x = x0;
 
-    ColumnVector er(n);
+    ColumnVector er(nMaxIter);
     er.fill(0.0f);
     er(0) = 1.0f;
 
     octave_idx_type i = 0;
 
-    float timeStart = (float)clock() / (float)CLOCKS_PER_SEC;
 
     while (er(i) > tol && i < nMaxIter)
     {
@@ -44,10 +43,7 @@ DEFUN_DLD(fast_sor, args, nargout, "C++ implementation of the SOR method")
                 soma += A(j, k) * x0(k);
             }
 
-            if (A(i, j) != 0)
-                x(j) = w * (b(j) - soma) / A(j, j) + (1 - w) * x0(j);
-            else
-                x(j) = (1 - w) * x0(j);
+            x(j) = w * (b(j) - soma) / A(j, j) + (1 - w) * x0(j);
         }
 
         ++i;
@@ -66,12 +62,11 @@ DEFUN_DLD(fast_sor, args, nargout, "C++ implementation of the SOR method")
         x0 = x;
     }
 
-    float timeEnd = (float)clock() / (float)CLOCKS_PER_SEC;
 
     retval(0) = x;
     retval(1) = er;
     retval(2) = i;
-    retval(3) = timeEnd - timeStart;
+    retval(3) = 0.0f;
 
     return retval;
 }

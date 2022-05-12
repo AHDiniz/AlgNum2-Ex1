@@ -19,7 +19,7 @@ DEFUN_DLD(fast_seidel, args, nargout, "C++ implementation of the Gauss-Seidel me
     ColumnVector x(n);
     x = x0;
 
-    ColumnVector er(n);
+    ColumnVector er(nMaxIter);
     er.fill(0.0f);
     er(0) = 1.0f;
 

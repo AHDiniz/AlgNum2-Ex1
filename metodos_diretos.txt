@@ -21,4 +21,11 @@ Número de condicionamento = 528421445779816768.000000
 
 rail_1357.mat:
 
-
+Taxa de preenchimento = 95.099991
+Solução aproximada para sistema linear = 36.837481
+Solução para sistema linear = 36.837481
+Distância relativa = 0.000000
+Distância relativa da decomposição = 1.738382
+Distância relativa dos termos independentes = 0.000000
+Norma do resíduo = 0.000000
+Número de condicionamento = 13294.845808
