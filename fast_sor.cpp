@@ -26,6 +26,7 @@ DEFUN_DLD(fast_sor, args, nargout, "C++ implementation of the SOR method")
 
     octave_idx_type i = 0;
 
+    float timeStart = (float)clock() / (float)CLOCKS_PER_SEC;
 
     while (er(i) > tol && i < nMaxIter)
     {
@@ -62,11 +63,12 @@ DEFUN_DLD(fast_sor, args, nargout, "C++ implementation of the SOR method")
         x0 = x;
     }
 
+    float timeEnd = (float)clock() / (float)CLOCKS_PER_SEC;
 
     retval(0) = x;
     retval(1) = er;
     retval(2) = i;
-    retval(3) = 0.0f;
+    retval(3) = timeEnd - timeStart;
 
     return retval;
 }

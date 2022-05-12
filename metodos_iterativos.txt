@@ -7,12 +7,16 @@ Omega = 1.500000
 Norma da solução (Jacobi) = 0.996201
 Erro (Jacobi) = 0.000101
 Número de iterações (Jacobi) = 106
+Tempo de execução (Jacobi) = 0.693793s
 Norma da solução (Seidel) = 0.996204
 Erro (Seidel) = 0.000109
 Número de iterações (Seidel) = 60
+Tempo de execução (Seidel) = 0.398709s
 Norma da solução (SOR) = 0.996206
 Erro (SOR) = 0.000110
 Número de iterações (SOR) = 22
+Tempo de execução (SOR) = 0.148768s
+
 
 rail_1357.mat:
 

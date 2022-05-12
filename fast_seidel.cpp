@@ -43,7 +43,7 @@ DEFUN_DLD(fast_seidel, args, nargout, "C++ implementation of the Gauss-Seidel me
                 soma += A(j, k) * x0(k);
             }
 
-            x(j) = A(i, j) != 0.0f ? (b(j) - soma) / A(j, j) : 0.0f;
+            x(j) = (b(j) - soma) / A(j, j);
         }
 
         ++i;
