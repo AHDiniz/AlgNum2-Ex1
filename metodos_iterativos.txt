@@ -14,6 +14,21 @@ Norma da solução (SOR) = 0.996206
 Erro (SOR) = 0.000110
 Número de iterações (SOR) = 22
 
-M80PI_n.mat:
+rail_1357.mat:
 
-
+É diagonal dominante? FALSE
+Tolerância = 0.000100
+Número máximo de iterações = 1000.000000
+Omega = 1.500000
+Tempo Jacobi = 2.936005s
+Norma da solução (Jacobi) = 0.039133
+Erro (Jacobi) = 0.000101
+Número de iterações (Jacobi) = 116
+Tempo Seidel = 25.147003s
+Norma da solução (Seidel) = 0.000000
+Erro (Seidel) = 0.618568
+Número de iterações (Seidel) = 1000
+Tempo SOR = 31.187988s
+Norma da solução (SOR) = 0.000000
+Erro (SOR) = 3.000000
+Número de iterações (SOR) = 1000

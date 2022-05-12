@@ -19,3 +19,6 @@ Distância relativa dos termos independentes = 0.000000
 Norma do resíduo = 0.000000
 Número de condicionamento = 528421445779816768.000000
 
+rail_1357.mat:
+
+
